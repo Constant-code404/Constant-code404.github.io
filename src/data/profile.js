@@ -18,7 +18,7 @@ export const profile = {
 
   // Adresse du site une fois en ligne (ex. 'constant-pichereau.vercel.app') :
   // elle s'affichera en bas du CV.
-  website: '',
+  website: 'constant-code404.github.io',
 
   summary:
     "Titulaire d'un bac général (spécialités Mathématiques et SES), je recherche un CDI ou une alternance dans la restauration à Brest. À l'aise dans la communication et motivé pour apprendre le métier, je souhaite offrir à vos clients un service chaleureux et efficace.",
