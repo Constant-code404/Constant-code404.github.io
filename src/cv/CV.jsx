@@ -1,4 +1,8 @@
-import { profile } from '../data/profile.js';
+import { profile as base } from '../data/profile.js';
+import { variants } from '../data/variants.js';
+
+const variantKey = new URLSearchParams(window.location.search).get('v');
+const profile = { ...base, ...(variants[variantKey] || {}) };
 import Photo from '../components/Photo.jsx';
 
 function Section({ title, children }) {

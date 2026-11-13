@@ -5,7 +5,7 @@ export const profile = {
   firstName: 'Constant',
   lastName: 'Pichereau',
   title: 'Serveur · Employé de restauration',
-  objective: 'Recherche un CDI ou une alternance',
+  objective: 'Recherche un CDI ou un CDD',
   location: 'Brest (29)',
   phone: '07 49 24 95 14',
   email: 'constant.pichereau@gmail.com',
@@ -21,12 +21,12 @@ export const profile = {
   website: 'constant-code404.github.io',
 
   summary:
-    "Titulaire d'un bac général (spécialités Mathématiques et SES), je recherche un CDI ou une alternance dans la restauration à Brest. À l'aise dans la communication et motivé pour apprendre le métier, je souhaite offrir à vos clients un service chaleureux et efficace.",
+    "Titulaire d'un bac général (spécialités Mathématiques et SES), je recherche un CDI ou un CDD dans la restauration à Brest. À l'aise dans la communication et motivé pour apprendre le métier, je souhaite offrir à vos clients un service chaleureux et efficace.",
 
   about: [
     "Je m'appelle Constant, j'habite à Brest et je souhaite démarrer ma vie professionnelle dans la restauration, en salle comme serveur ou au sein d'une équipe de restaurant.",
     "Ce qui m'attire dans ce métier, c'est le contact humain : accueillir les clients, les conseiller et faire en sorte qu'ils passent un bon moment. La communication est mon point fort, et j'ai envie de la mettre au service d'une équipe.",
-    "Je suis ouvert à un CDI comme à une alternance : je veux apprendre les gestes du métier sur le terrain, progresser vite et prendre des responsabilités.",
+    "Je suis ouvert à un CDI comme à un CDD : je veux apprendre les gestes du métier sur le terrain, progresser vite et prendre des responsabilités.",
   ],
 
   strengths: [
@@ -62,9 +62,9 @@ export const profile = {
     },
     {
       title: 'Envie d’apprendre',
-      short: 'Motivé pour me former aux métiers de la salle et progresser.',
+      short: 'Motivé pour me former vite et m’investir dans l’équipe.',
       detail:
-        "Je débute et je le sais : j'arrive avec de la motivation, de l'écoute et l'envie d'apprendre auprès d'une équipe expérimentée, notamment dans le cadre d'une alternance.",
+        "Je débute et je le sais : j'arrive avec de la motivation, de l'écoute et l'envie d'apprendre auprès d'une équipe expérimentée et de m'investir pleinement dans mon travail.",
     },
   ],
 
