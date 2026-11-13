@@ -1,2 +1,4 @@
 node_modules
 dist
+lettres
+src/data/lettres.js

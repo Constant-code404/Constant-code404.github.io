@@ -3,7 +3,7 @@
 // Premier lancement : npx playwright install chromium
 import { preview } from 'vite';
 import { chromium } from 'playwright';
-import { copyFileSync } from 'node:fs';
+import { mkdirSync } from 'node:fs';
 import { profile } from '../src/data/profile.js';
 import { variants } from '../src/data/variants.js';
 
@@ -22,8 +22,22 @@ for (const [query, file] of jobs) {
   await page.evaluate(() => document.fonts.ready);
   await page.emulateMedia({ media: 'print' });
   await page.pdf({ path: out, format: 'A4', printBackground: true, preferCSSPageSize: true });
-  copyFileSync(out, `dist/${file}`);
   console.log(`CV généré : ${out}`);
+}
+
+// Lettres de motivation (dossier lettres/, hors site)
+let letters = {};
+try {
+  ({ letters } = await import('../src/data/lettres.js'));
+} catch {}
+mkdirSync('lettres', { recursive: true });
+for (const [key, l] of Object.entries(letters)) {
+  const out = `lettres/${l.file}`;
+  await page.goto(`${url}lettre.html?l=${key}`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  await page.emulateMedia({ media: 'print' });
+  await page.pdf({ path: out, format: 'A4', printBackground: true, preferCSSPageSize: true });
+  console.log(`Lettre générée : ${out}`);
 }
 
 await browser.close();
